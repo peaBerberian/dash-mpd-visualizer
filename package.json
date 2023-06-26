@@ -1,0 +1,26 @@
+{
+  "name": "dash-mpd-visualizer",
+  "version": "0.1.0",
+  "description": "Visualizer for DASH MPD documents",
+  "main": "index.html",
+  "scripts": {
+    "start": "http-server --cors",
+    "eslint": "eslint scripts**/*",
+    "prettier": "prettier --write . --loglevel warn",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "dash",
+    "mpd"
+  ],
+  "author": "peaberberian",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^8.43.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-jsdoc": "^46.3.0",
+    "http-server": "^14.1.1",
+    "prettier": "^2.8.8"
+  }
+}

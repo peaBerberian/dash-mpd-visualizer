@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="Description" content="Visualizer for DASH MPD" />
+    <title>MPD Visualizer</title>
+    <style>
+      .attr-name {
+        font-weight: bold;
+      }
+      details {
+        margin-left: 15px;
+      }
+      details[open] {
+        background-color: #fff;
+      }
+      details {
+        background-color: #eee;
+      }
+      details[open] summary {
+        border-bottom: 1px solid #aaa;
+        margin-bottom: 0.5em;
+      }
+      summary {
+        font-weight: bold;
+        margin: -0.5em 0.5em 0;
+        margin-bottom: 0px;
+        padding: 0.5em;
+      }
+      .attr-list,
+      .values-list {
+        margin-bottom: 20px;
+        margin-left: 20px;
+      }
+      .mpd-description {
+        margin-top: 20px;
+      }
+
+      h2 {
+  border-bottom: 1px dotted black;
+  font-size: 18px;
+}
+
+#selection {
+  background-color: #f6f8ff;
+  margin: 5px;
+  padding: 10px;
+}
+
+.choices-element {
+  margin: 9px;
+}
+
+#file-description {
+  margin: 5px;
+  padding: 10px;
+}
+
+.box {
+  margin: 20px;
+}
+
+.box-name {
+  font-weight: bold;
+}
+
+.box-size {
+  font-style: italic;
+}
+
+.box-description {
+  font-style: italic;
+  margin-bottom: 7px;
+}
+
+.value-object-prop {
+  margin-left: 25px;
+}
+
+.value-object-line:nth-child(odd) {
+  background-color: #eee;
+}
+
+.value-object-line:nth-child(even) {
+  background-color: #ccc;
+}
+
+.value-object-line {
+  padding: 10px;
+}
+
+    </style>
+  </head>
+  <body>
+    <h1 id="title">
+      DASH MPD Visualizer
+    </h1>
+    <div id="selection">
+      <h2 id="selection-title">
+        File selection
+      </h2>
+      <div id="choices-local-segment" class="choices-element choices-input">
+        <i>Choose a file locally:</i><input type="file" id="file-input" name="file" />
+      </div>
+      <div id="choices-separator" class="choices-element">
+        <b><i>or</i></b>
+      </div>
+      <div id="choices-url-segment" class="choices-element choices-input">
+        <input id="url-input" style="width: 350px;" name="url" placeholder="URL to the file" />
+        <button type="button" id="url-button">OK</button>
+      </div>
+    </div>
+    <div class="mpd-description"></div>
+    <script type="module" charset="UTF-8" src="./scripts/index.mjs"></script>
+  </body>
+</html>
